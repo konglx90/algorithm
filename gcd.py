@@ -25,3 +25,4 @@ def gcd_2(a, b):
 if __name__ == "__main__":
     print(gcd(34398, 2132))
     print(gcd_2(34398, 2132))
+    print(gcd(9, 17))
