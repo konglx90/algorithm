@@ -13,20 +13,24 @@ def max_sub(a_list):
     i_index = 0
     j_index = 0
     l = len(a_list)
-    for i in range(l-1):
-        for j in range(i+1, l):
+    for i in range(l - 1):
+        for j in range(i + 1, l):
             if a_list[j] > a_list[i]:
-                if j-i>temp:
-                    temp = j-i
+                if j - i > temp:
+                    temp = j - i
                     i_index = i
                     j_index = j
     return i_index, j_index
+
 
 def max_sub2(a_list):
     """
     1的改进版
     """
     pass
+
+
 if __name__ == "__main__":
     import doctest
+
     doctest.testmod(verbose=True)
