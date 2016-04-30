@@ -10,6 +10,7 @@ def insert_sort(a_list):
         # TODO
     return a_list
 
+
 def half_search(a_list, num):
     """
     >>> half_search([1,2,3,5,45,123], 3)
@@ -26,27 +27,29 @@ def half_search(a_list, num):
     left = 0
     right = len(a_list) - 1
     mid = (left + right) / 2
-    
-    while a_list[mid] != num and right-left>1:
+
+    while a_list[mid] != num and right - left > 1:
         if a_list[mid] > num:
             right = mid - 1
-            if(a_list[right]<num):
-                return right+1
+            if (a_list[right] < num):
+                return right + 1
         else:
             left = mid + 1
-            if(a_list[left]>num):
+            if (a_list[left] > num):
                 return left
-        mid = (left+right)/2
-    if right-left == 1:
+        mid = (left + right) / 2
+    if right - left == 1:
         if a_list[left] == num:
             return left
         if a_list[right] == num:
-            return right 
+            return right
         else:
-            return left+1
+            return left + 1
     return mid
+
 
 if __name__ == "__main__":
     import doctest
+
     doctest.testmod(verbose=True)
     print insert_sort([1, 22, 4, 12, 16])
