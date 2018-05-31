@@ -1,12 +1,12 @@
 # -*- coding:utf-8 -*-
-def xuan_zhuang(step, a_list):
+def rotation(step, a_list):
     """
-    TestCase for xuan_zhuang
-    >>> xuan_zhuang(1, [1,2,3,4,5])
+    TestCase for rotation
+    >>> rotation(1, [1,2,3,4,5])
     [5, 1, 2, 3, 4]
-    >>> xuan_zhuang(2, [1,2,3,4,5])
+    >>> rotation(2, [1,2,3,4,5])
     [4, 5, 1, 2, 3]
-    >>> xuan_zhuang(7, [1,2,3,4,5])
+    >>> rotation(7, [1,2,3,4,5])
     [4, 5, 1, 2, 3]
     """
     step %= len(a_list)

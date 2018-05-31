@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-def pa(n):
+def climb_stair(n):
     """
     动态规划: 爬楼梯
     """
@@ -14,9 +14,9 @@ def pa(n):
     print sum2
 
 if __name__ == "__main__":
-    pa(3)
-    pa(4)
-    pa(5)
-    pa(6)
-    pa(7)
-    pa(120)
+    climb_stair(3)
+    climb_stair(4)
+    climb_stair(5)
+    climb_stair(6)
+    climb_stair(7)
+    climb_stair(120)

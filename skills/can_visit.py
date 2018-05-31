@@ -3,7 +3,7 @@
 
 class ListNode:
     """
-    klklklklklklklk
+    Accessibility of class and object attributes
     """
     _class_field10 = 'node class field 1-0'
     _class_field11_ = 'node class field 1-1'

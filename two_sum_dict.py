@@ -11,19 +11,24 @@ def find(value, a_list):
     >>> find(1, [])
     False
     >>> find(4, [2, 3, 2])
-    False
+    True
     """
     # 现将列表变为<value, index>字典
     if a_list is None or len(a_list) < 2:
         return False
     d = {}
     for i in range(len(a_list)):
-        d[a_list[i]] = i
+        if d.has_key(a_list[i]):
+            d[a_list[i]] = d[a_list[i]] + 1
+        else:
+            d[a_list[i]] = 1
     # 第二次遍历
     for i in a_list:
+        if d.has_key(value-i):
         # 排除自己本身
-        if(value-i in d and value != 2*i):
-            return True
+            x = value == i*2
+            if(not (x and d[i] == 1)):
+                return True
     return False
 if __name__ == "__main__":
     import doctest
